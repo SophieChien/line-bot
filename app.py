@@ -39,21 +39,21 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    reply = '窩聽不冬中穩'
+    r = '很抱歉，您說什麼'
     if msg in ['Hi', 'hi']:
-        reply == 'Hello'
+        r = 'Hello'
     elif msg == '你的名字':
-        reply == '我是科基器人'
+        r = '我是科基器人'
     elif msg in ['吃飽沒', '吃飯']:
-        reply == '仙女不用吃飯'
+        r = '仙女不用吃飯'
     elif msg == 'good morning':
-        reply == 'good morning'
+        r = 'good morning'
     elif msg == 'good afternoon':
-        reply == 'good afternoon'
+        r = 'good afternoon'
 
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text = reply))
+        TextSendMessage(text=r))
 
 
 if __name__ == "__main__":
