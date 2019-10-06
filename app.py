@@ -40,11 +40,11 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     reply = '窩聽不冬中穩'
-    if msg == 'Hi':
-        reply == 'Hello,Cliff BB'
+    if msg in ['Hi', 'hi']:
+        reply == 'Hello'
     elif msg == '你的名字':
-        reply == 'my name is 科基器人'
-    elif msg == '吃飽沒':
+        reply == '我是科基器人'
+    elif msg in ['吃飽沒', '吃飯']:
         reply == '仙女不用吃飯'
     elif msg == 'good morning':
         reply == 'good morning'
