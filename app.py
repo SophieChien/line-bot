@@ -48,6 +48,8 @@ def handle_message(event):
         reply == '仙女不用吃飯'
     elif msg == 'good morning':
         reply == 'good morning'
+    elif msg == 'good afternoon':
+        reply == 'good afternoon'
 
     line_bot_api.reply_message(
         event.reply_token,
