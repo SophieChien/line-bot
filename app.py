@@ -42,8 +42,8 @@ def handle_message(event):
     r = '很抱歉，您說什麼'
     if '貼圖' in msg:
         sticker_message = StickerSendMessage(
-            package_id='2',
-            sticker_id='23'
+            package_id='1',
+            sticker_id='1'
         )
         line_bot_api.reply_message(
             event.reply_token,
@@ -60,10 +60,9 @@ def handle_message(event):
         r = 'good morning'
     elif msg == 'good afternoon':
         r = 'good afternoon'
-
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=r))
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=r))
 
 
 if __name__ == "__main__":
